@@ -1,0 +1,216 @@
+name: Varbase Admin Base
+description: A recipe to manage default installed modules, configs and permissions for Varbase admin experience.
+type: Varbase Admin
+install:
+  - admin_audit_trail
+  - admin_audit_trail_file
+  - admin_audit_trail_media
+  - admin_audit_trail_user
+  - admin_audit_trail_taxonomy
+  - admin_audit_trail_node
+  - admin_audit_trail_menu
+  - admin_audit_trail_auth
+  - masquerade
+  - menu_admin_per_menu
+  - responsive_preview
+  - revision_log_default
+  - syslog
+  - update
+  - autosave_form
+  - settings_tray
+  - entity_clone
+  - taxonomy_manager
+  - taxonomy_access_fix
+  - coffee
+  - length_indicator
+  - navigation
+  - navigation_extra_tools
+  - responsive_preview_navigation
+  - gin_toolbar
+  - gin_login
+  - gin_everywhere
+  - gin_type_tray
+  - trash
+  - eca_vbo
+config:
+  import:
+    autosave_form:
+      - autosave_form.messages
+    navigation:
+      - navigation.settings
+      - system.menu.content
+    varbase_admin_base:
+      - responsive_preview.device.iphone_15
+      - responsive_preview.device.iphone_15_pro_max
+      - responsive_preview.device.galaxy_tab_s9_ultra
+      - responsive_preview.device.samsung_galaxy_s23_ultra
+      - responsive_preview.device.pixel_7
+      - responsive_preview.device.galaxy_s9
+      - responsive_preview.device.galaxy_tab_s4
+      - responsive_preview.device.ipad_pro
+      - responsive_preview.device.iphone_xs_max
+      - responsive_preview.device.iphone_xs
+      - responsive_preview.device.large
+      - responsive_preview.device.medium
+      - responsive_preview.device.small
+      - navigation.block_layout
+      - autosave_form.settings
+      - trash.settings
+  actions:
+    user.settings:
+      simpleConfigUpdate:
+        register: admin_only
+    node.settings:
+      simpleConfigUpdate:
+        use_admin_theme: true
+    gin.settings:
+      simpleConfigUpdate:
+        logo:
+          path: profiles/contrib/varbase/images/varbase-medium-logo-emblem-color.png
+          use_default: false
+        favicon:
+          mimetype: image/vnd.microsoft.icon
+          path: profiles/contrib/varbase/images/favicon.ico
+          use_default: false
+        show_description_toggle: true
+    gin_login.settings:
+      simpleConfigUpdate:
+        logo:
+          use_default: false
+          path: themes/contrib/vartheme_bs5/logo.svg
+        brand_image:
+          use_default: true
+    navigation.settings:
+      simpleConfigUpdate:
+        logo:
+          provider: custom
+          path: profiles/contrib/varbase/images/varbase-medium-logo-emblem-color.png
+          max:
+            filesize: 1048576
+            height: 40
+            width: 40
+    roleassign.settings:
+      simpleConfigUpdate:
+        roleassign_roles:
+          editor: editor
+          content_admin: content_admin
+          site_admin: site_admin
+          administrator: "0"
+    config_perms.custom_perms_entity.administer_account_settings:
+      simpleConfigUpdate:
+        label: "Administer account settings"
+        route: entity.user.admin_form
+    config_perms.custom_perms_entity.administer_date_time:
+      simpleConfigUpdate:
+        label: "Administer date-time"
+        route: entity.date_format.collection
+    config_perms.custom_perms_entity.administer_error_logs:
+      simpleConfigUpdate:
+        label: "Administer error logs"
+        route: dblog.overview
+    config_perms.custom_perms_entity.administer_file_system:
+      simpleConfigUpdate:
+        label: "Administer file system"
+        route: system.file_system_settings
+    user.role.authenticated:
+      grantPermissions:
+        - 'access shortcuts'
+        - 'userprotect.account.edit'
+        - 'userprotect.mail.edit'
+        - 'userprotect.pass.edit'
+    user.role.editor:
+      grantPermissions:
+        - 'customize shortcut links'
+        - 'access toolbar'
+        - 'access admin audit trail'
+        - 'access coffee'
+        - 'access responsive preview'
+        - 'clone node entity'
+        - 'access taxonomy manager list'
+        - 'access navigation'
+        - 'access trash'
+        - 'restore node entities'
+        - 'restore taxonomy_term entities'
+        - 'view deleted entities'
+    user.role.seo_admin:
+      grantPermissions:
+        - 'customize shortcut links'
+        - 'access toolbar'
+        - 'access admin audit trail'
+        - 'access coffee'
+        - 'access responsive preview'
+        - 'access navigation'
+        - 'access trash'
+        - 'view deleted entities'
+    user.role.content_admin:
+      grantPermissions:
+        - 'customize shortcut links'
+        - 'access toolbar'
+        - 'access admin audit trail'
+        - 'administer footer menu items'
+        - 'administer main menu items'
+        - 'access coffee'
+        - 'access responsive preview'
+        - 'clone block entity'
+        - 'clone block_content entity'
+        - 'clone node entity'
+        - 'clone menu_link_content entity'
+        - 'clone user entity'
+        - 'clone taxonomy_term entity'
+        - 'clone taxonomy_vocabulary entity'
+        - 'access taxonomy manager list'
+        - 'access navigation'
+        - 'access navigation extra tools cache flushing'
+        - 'access navigation extra tools cron'
+        - 'access trash'
+        - 'restore block_content entities'
+        - 'restore file entities'
+        - 'restore media entities'
+        - 'restore node entities'
+        - 'restore taxonomy_term entities'
+        - 'view deleted entities'
+    user.role.site_admin:
+      grantPermissions:
+        - 'administer shortcuts'
+        - 'customize shortcut links'
+        - 'switch shortcut sets'
+        - 'access toolbar'
+        - 'delete_homepage_node'
+        - 'access admin audit trail'
+        - 'administer admin menu items'
+        - 'administer footer menu items'
+        - 'administer main menu items'
+        - 'administer tools menu items'
+        - 'administer account menu items'
+        - 'access coffee'
+        - 'masquerade as authenticated'
+        - 'masquerade as content_admin'
+        - 'masquerade as editor'
+        - 'masquerade as seo_admin'
+        - 'masquerade as site_admin'
+        - 'assign roles'
+        - 'userprotect.protected_site_admin.bypass'
+        - 'access responsive preview'
+        - 'clone block entity'
+        - 'clone block_content entity'
+        - 'clone node entity'
+        - 'clone menu_link_content entity'
+        - 'clone user entity'
+        - 'clone taxonomy_term entity'
+        - 'clone taxonomy_vocabulary entity'
+        - 'access taxonomy manager list'
+        - 'access navigation'
+        - 'access navigation extra tools cache flushing'
+        - 'access navigation extra tools cron'
+        - 'access trash'
+        - 'restore block_content entities'
+        - 'restore file entities'
+        - 'restore media entities'
+        - 'restore node entities'
+        - 'restore taxonomy_term entities'
+        - 'purge block_content entities'
+        - 'purge file entities'
+        - 'purge media entities'
+        - 'purge node entities'
+        - 'purge taxonomy_term entities'
+        - 'view deleted entities'
