@@ -30,7 +30,6 @@
     "drupal/coffee": "~2",
     "drupal/length_indicator": "~1",
     "drupal/navigation_extra_tools": "~1",
-    "drupal/responsive_preview_navigation": "~1",
     "drupal/gin": "~5",
     "drupal/gin_toolbar": "~1",
     "drupal/gin_login": "~2",
