@@ -31,7 +31,7 @@
     "drupal/length_indicator": "~1",
     "drupal/navigation_extra_tools": "~1",
     "drupal/gin": "~5",
-    "drupal/gin_toolbar": "~1",
+    "drupal/gin_toolbar": "~3",
     "drupal/gin_login": "~2",
     "drupal/gin_everywhere": "~1",
     "drupal/gin_type_tray": "~1",
