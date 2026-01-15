@@ -21,7 +21,6 @@
     "drupal/admin_audit_trail": "~1",
     "drupal/masquerade": "~2",
     "drupal/menu_admin_per_menu": "~1",
-    "drupal/responsive_preview": "~2",
     "drupal/revision_log_default": "~1",
     "drupal/autosave_form": "~1",
     "drupal/entity_clone": "~2",
