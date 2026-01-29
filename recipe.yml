@@ -34,6 +34,7 @@ install:
   - gin_type_tray
   - trash
   - eca_vbo
+  - ui_icons
 config:
   import:
     autosave_form:
