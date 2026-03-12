@@ -43,7 +43,8 @@
     "drupal/prevent_homepage_deletion": "~3",
     "drupal/views_bulk_operations": "~4",
     "drupal/views_bulk_edit": "~3",
-    "drupal/ui_icons": "~1"
+    "drupal/ui_icons": "~1",
+    "drupal/varbase_recipes": "~1 || 1.0.x-dev"
   },
   "version": "1.0.x-dev"
 }

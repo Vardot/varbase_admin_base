@@ -35,6 +35,7 @@ install:
   - trash
   - eca_vbo
   - ui_icons
+  - varbase_recipes
 config:
   import:
     autosave_form:
