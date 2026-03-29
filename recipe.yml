@@ -3,6 +3,8 @@ description: A recipe to manage default installed modules, configs and permissio
 type: Varbase Admin
 install:
   - node
+  - help
+  - taxonomy
   - gin
   - roleassign
   - config_perms
@@ -170,6 +172,7 @@ config:
         - 'administer account menu items'
         - 'administer account settings'
         - 'administer admin menu items'
+        - 'administer blocks'
         - 'administer footer menu items'
         - 'administer main menu items'
         - 'administer tools menu items'
