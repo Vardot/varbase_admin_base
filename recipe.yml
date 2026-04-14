@@ -78,6 +78,13 @@ config:
             filesize: 1048576
             height: 40
             width: 40
+    trash.settings:
+      simpleConfigUpdate:
+        enabled_entity_types.file: []
+        enabled_entity_types.media: []
+        enabled_entity_types.taxonomy_term: []
+        enabled_entity_types.node: []
+        enabled_entity_types.canvas_page: []
     user.role.content_editor:
       grantPermissions:
         - 'access admin audit trail'
@@ -119,13 +126,11 @@ config:
         - 'administer footer menu items'
         - 'administer main menu items'
         - 'clone block entity'
-        - 'clone block_content entity'
         - 'clone menu_link_content entity'
         - 'clone node entity'
         - 'clone taxonomy_term entity'
         - 'clone taxonomy_vocabulary entity'
         - 'clone user entity'
-        - 'restore block_content entities'
         - 'restore file entities'
         - 'restore media entities'
         - 'restore node entities'
@@ -179,7 +184,6 @@ config:
         - 'administer users'
         - 'assign roles'
         - 'clone block entity'
-        - 'clone block_content entity'
         - 'clone menu_link_content entity'
         - 'clone node entity'
         - 'clone taxonomy_term entity'
@@ -190,12 +194,10 @@ config:
         - 'masquerade as content_editor'
         - 'masquerade as seo_admin'
         - 'masquerade as site_admin'
-        - 'purge block_content entities'
         - 'purge file entities'
         - 'purge media entities'
         - 'purge node entities'
         - 'purge taxonomy_term entities'
-        - 'restore block_content entities'
         - 'restore file entities'
         - 'restore media entities'
         - 'restore node entities'
