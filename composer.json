@@ -28,6 +28,7 @@
     "drupal/taxonomy_access_fix": "~4",
     "drupal/coffee": "~2",
     "drupal/length_indicator": "~1",
+    "drupal/maxlength": "~3",
     "drupal/navigation_extra_tools": "~1",
     "drupal/gin": "~5",
     "drupal/gin_toolbar": "~3",
