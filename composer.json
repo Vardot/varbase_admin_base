@@ -17,7 +17,7 @@
     "source": "http://cgit.drupalcode.org/varbase_admin_base"
   },
   "require": {
-    "drupal/core": "~11.3.0",
+    "drupal/core": "~11.4.0",
     "drupal/admin_audit_trail": "~1",
     "drupal/masquerade": "~2",
     "drupal/menu_admin_per_menu": "~1",
