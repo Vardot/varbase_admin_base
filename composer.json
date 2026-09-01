@@ -46,7 +46,7 @@
     "drupal/views_bulk_edit": "~3",
     "drupal/ui_icons": "~1",
     "drupal/canvas_icon_picker": "~1",
-    "drupal/varbase_recipes": "~1.0.0"
+    "drupal/varbase_recipes": "1.0.x-dev"
   },
-  "version": "1.0.0-rc2"
+  "version": "1.0.x-dev"
 }
