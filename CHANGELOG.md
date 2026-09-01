@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-rc2] - 2026-09-01
+### Added
+- Install the Canvas Icon Picker (`drupal/canvas_icon_picker`) beside `ui_icons`, and
+  set `allowed_packs` to `bootstrap_icons` and `vartheme_social`, so every Varbase site
+  template inherits the searchable, visual icon picker in the Drupal Canvas editor
+  instead of a plain select list of icon names.
+### Changed
+- Pin the `drupal/varbase_recipes` dependency to `~1.0.0` for the release.
+- Update the version badge to `1.0.0-rc2` in `README.md`.
+
 ## [1.0.0-rc1] - 2026-08-15
 ### Changed
 - Release the recipe with the Varbase 11.0.0-rc1 suite. No functional changes since 1.0.0-beta1.
@@ -29,7 +39,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Varbase Admin Base recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-rc1...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-rc2...1.0.x
+[1.0.0-rc2]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-rc1...1.0.0-rc2
 [1.0.0-rc1]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-beta1...1.0.0-rc1
 [1.0.0-beta1]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-alpha2...1.0.0-beta1
 [1.0.0-alpha2]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-alpha1...1.0.0-alpha2
