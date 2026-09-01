@@ -38,6 +38,7 @@ install:
   - trash
   - eca_vbo
   - ui_icons
+  - canvas_icon_picker
   - varbase_recipes
 config:
   import:
@@ -47,6 +48,17 @@ config:
       - navigation.settings
       - system.menu.content
   actions:
+    # Icon props across the Vartheme BS5 themes render through the Canvas Icon
+    # Picker, so an editor searches and sees icons instead of reading a select
+    # list of names. Set here rather than in each site template, so Varbase
+    # Starter, Educare, Horizon Aid and RightUp all inherit it from one file.
+    # These are the pack ids every Vartheme BS5 theme declares in its
+    # <theme>.icons.yml; the module's own default is an empty map.
+    canvas_icon_picker.settings:
+      simpleConfigUpdate:
+        allowed_packs:
+          - bootstrap_icons
+          - vartheme_social
     user.settings:
       simpleConfigUpdate:
         register: admin_only
