@@ -39,6 +39,7 @@ install:
   - eca_vbo
   - ui_icons
   - canvas_icon_picker
+  - smart_date
   - varbase_recipes
 config:
   import:

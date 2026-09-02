@@ -46,6 +46,7 @@
     "drupal/views_bulk_edit": "~3",
     "drupal/ui_icons": "~1",
     "drupal/canvas_icon_picker": "~1",
+    "drupal/smart_date": "~5",
     "drupal/varbase_recipes": "1.0.x-dev",
     "vardot/jquery.fancytree": "^2.38.5"
   },
