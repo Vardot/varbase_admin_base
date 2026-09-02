@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-rc3] - 2026-09-02
+### Added
+- Require the `vardot/jquery.fancytree` library (`^2.38.5`), so the recipe brings the
+  Fancytree library `drupal/taxonomy_manager` loads from
+  `/libraries/jquery.fancytree/dist/`. The suggested `fancytree/fancytree` package does
+  not exist on Packagist, so the library never arrived over Composer.
+### Fixed
+- Install `smart_date` early: it arrives last in the recipe chain and can deadlock a
+  Drupal CMS install.
+- Fix the `drupal/smart_date` constraint to `~4.3.0`.
+### Changed
+- Pin the `drupal/varbase_recipes` dependency to `~1.0.0` for the release.
+- Update the version badge to `1.0.0-rc3` in `README.md`.
+
 ## [1.0.0-rc2] - 2026-09-01
 ### Added
 - Install the Canvas Icon Picker (`drupal/canvas_icon_picker`) beside `ui_icons`, and
@@ -39,7 +53,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Varbase Admin Base recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-rc2...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-rc3...1.0.x
+[1.0.0-rc3]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-rc2...1.0.0-rc3
 [1.0.0-rc2]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-rc1...1.0.0-rc2
 [1.0.0-rc1]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-beta1...1.0.0-rc1
 [1.0.0-beta1]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-alpha2...1.0.0-beta1
