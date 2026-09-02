@@ -1105,10 +1105,7 @@ display:
       defaults:
         show_admin_links: false
       show_admin_links: false
-      display_extenders:
-        metatag_display_extender:
-          metatags: {  }
-          tokenize: false
+      display_extenders: {  }
       path: admin/people/list
       menu:
         type: 'default tab'
