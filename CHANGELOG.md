@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-rc4] - 2026-09-02
+### Fixed
+- Remove the empty `metatag_display_extender` stanza from `config/views.view.content.yml`
+  and `config/views.view.user_admin_people.yml`. Both stanzas carried no data
+  (`metatags: {}`, `tokenize: false`), and the extender is provided by the
+  `metatag_views` submodule this recipe does not require, so building either admin view
+  on a Drupal CMS base fatalled with `PluginNotFoundException`.
+### Changed
+- Pin the `drupal/varbase_recipes` dependency to `~1.0.0` for the release.
+- Update the version badge to `1.0.0-rc4` in `README.md`.
+
 ## [1.0.0-rc3] - 2026-09-02
 ### Added
 - Require the `vardot/jquery.fancytree` library (`^2.38.5`), so the recipe brings the
@@ -53,7 +64,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Varbase Admin Base recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-rc3...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-rc4...1.0.x
+[1.0.0-rc4]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-rc3...1.0.0-rc4
 [1.0.0-rc3]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-rc2...1.0.0-rc3
 [1.0.0-rc2]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-rc1...1.0.0-rc2
 [1.0.0-rc1]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-beta1...1.0.0-rc1
