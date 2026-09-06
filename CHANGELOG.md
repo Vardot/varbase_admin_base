@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-09-06
+### Changed
+- Release the stable Varbase Admin Base 1.0.0 with the Varbase 11.0.0 suite.
+  No functional changes since 1.0.0-rc4.
+- Pin the `drupal/varbase_recipes` dependency to `~1.0.0` for the release, now that
+  Varbase Recipes 1.0.0 is released.
+- Update the version badge to `1.0.0` in `README.md`.
+
 ## [1.0.0-rc4] - 2026-09-02
 ### Fixed
 - Remove the empty `metatag_display_extender` stanza from `config/views.view.content.yml`
@@ -64,7 +72,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Varbase Admin Base recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-rc4...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0...1.0.x
+[1.0.0]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-rc4...1.0.0
 [1.0.0-rc4]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-rc3...1.0.0-rc4
 [1.0.0-rc3]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-rc2...1.0.0-rc3
 [1.0.0-rc2]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-rc1...1.0.0-rc2
