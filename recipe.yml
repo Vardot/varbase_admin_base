@@ -23,7 +23,6 @@ install:
   - update
   - autosave_form
   - settings_tray
-  - entity_clone
   - taxonomy_manager
   - taxonomy_access_fix
   - coffee
