@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-09-08
+### Fixed
+- Remove the orphaned Entity Clone permission grants left behind when the module was
+  removed ([#3621823](https://www.drupal.org/i/3621823)). The `entity_clone` module was
+  removed in 1.0.1, but its six permission grants stayed on the `content_editor`,
+  `content_admin` and `site_admin` roles, so every install applying this recipe printed
+  three `Non-existent permission(s) assigned to role ...` errors.
+### Changed
+- Pin the `drupal/varbase_recipes` dependency to `~1.0.0` for the release.
+- Update the version badge to `1.0.2` in `README.md`.
+
 ## [1.0.1] - 2026-09-08
 ### Fixed
 - Temporarily remove Entity Clone until it has a stable release
@@ -80,7 +91,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Varbase Admin Base recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.1...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.2...1.0.x
+[1.0.2]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.1...1.0.2
 [1.0.1]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0...1.0.1
 [1.0.0]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-rc4...1.0.0
 [1.0.0-rc4]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0-rc3...1.0.0-rc4
