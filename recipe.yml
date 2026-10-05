@@ -98,6 +98,12 @@ config:
         enabled_entity_types.taxonomy_term: []
         enabled_entity_types.node: []
         enabled_entity_types.canvas_page: []
+    user.role.anonymous:
+      grantPermissions:
+        - 'view any term'
+    user.role.authenticated:
+      grantPermissions:
+        - 'view any term'
     user.role.content_editor:
       grantPermissions:
         - 'access admin audit trail'

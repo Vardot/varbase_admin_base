@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Grant the anonymous and authenticated roles the Taxonomy Access Fix `view any term`
+  permission, so public pages can show published terms such as Tags
+  ([#3628645](https://www.drupal.org/i/3628645)). Without it, visitors got a 404 on term
+  pages and Drupal Canvas could not render term names for them.
 
 ## [1.0.2] - 2026-09-08
 ### Fixed
