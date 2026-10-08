@@ -1,6 +1,9 @@
 name: Varbase Admin Base
 description: A recipe to manage default installed modules, configs and permissions for Varbase admin experience.
 type: Varbase Admin
+recipes:
+  # The dashboard welcome shows the user's picture.
+  - core/recipes/user_picture
 install:
   - node
   - help
