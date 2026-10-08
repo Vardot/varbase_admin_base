@@ -40,6 +40,25 @@ install:
   - canvas_icon_picker
   - smart_date
   - varbase_recipes
+  # The admin experience drupal_cms_admin_ui used to set up. That recipe was
+  # removed from Drupal CMS 2.2 and its last release requires Tagify 1, which
+  # no longer installs beside Drupal CMS, so Varbase carries it here.
+  - announcements_feed
+  - automatic_updates
+  - contextual
+  - dashboard
+  - dblog
+  - drupal_cms_helper
+  - drupical
+  - file
+  - menu_link_content
+  - menu_ui
+  - project_browser
+  - sam
+  - tagify
+  - tagify_user_list
+  - views_ui
+  - view_password
 config:
   import:
     autosave_form:
@@ -47,6 +66,32 @@ config:
     navigation:
       - navigation.settings
       - system.menu.content
+      - system.menu.navigation-user-links
+    gin:
+      - block.block.gin_breadcrumbs
+      - block.block.gin_content
+      - block.block.gin_local_actions
+      - block.block.gin_messages
+      - block.block.gin_page_title
+      - block.block.gin_primary_local_tasks
+      - block.block.gin_secondary_local_tasks
+    claro:
+      - block.block.claro_breadcrumbs
+      - block.block.claro_content
+      - block.block.claro_local_actions
+      - block.block.claro_messages
+      - block.block.claro_page_title
+      - block.block.claro_primary_local_tasks
+      - block.block.claro_secondary_local_tasks
+    system:
+      - system.menu.footer
+    # Core's own content and people admin views, created here as
+    # drupal_cms_content_type_base and drupal_cms_admin_ui used to, before any
+    # Varbase recipe adds to them.
+    node:
+      - views.view.content
+    user:
+      - views.view.user_admin_people
   actions:
     # Icon props across the Vartheme BS5 themes render through the Canvas Icon
     # Picker, so an editor searches and sees icons instead of reading a select
@@ -59,6 +104,52 @@ config:
         allowed_packs:
           - bootstrap_icons
           - vartheme_social
+    announcements_feed.settings:
+      simpleConfigUpdate:
+        limit: 2
+    automatic_updates.settings:
+      simpleConfigUpdate:
+        allow_core_minor_updates: true
+    core.menu.static_menu_link_overrides:
+      overrideMenuLinks:
+        announcements_feed.announcement:
+          enabled: false
+    drupical.settings:
+      simpleConfigUpdate:
+        limit: 5
+    navigation.block_layout:
+      # Simple config, so applying the recipe twice does not add the
+      # Dashboard and Help items twice. The UUIDs are from
+      # navigation.block_layout.yml.
+      simpleConfigUpdate:
+        sections.0.components.2622e40b-8786-4b8c-8883-19e49da53023.configuration:
+          id: navigation_dashboard
+          label: Dashboard
+          label_display: '0'
+          provider: dashboard
+        sections.0.components.52e884dd-0301-4265-b2b3-9cea53a403f3:
+          uuid: 52e884dd-0301-4265-b2b3-9cea53a403f3
+          region: footer
+          configuration:
+            id: navigation_link
+            label: Help
+            label_display: '0'
+            provider: navigation
+            title: Help
+            uri: 'https://project.pages.drupalcode.org/drupal_cms'
+            icon_class: help
+          weight: -2
+          additional: []
+    project_browser.admin_settings:
+      simpleConfigUpdate:
+        allow_ui_install: true
+        max_selections: 1
+    system.theme:
+      simpleConfigUpdate:
+        admin: gin
+    update.settings:
+      simpleConfigUpdate:
+        check.disabled_extensions: true
     user.settings:
       simpleConfigUpdate:
         register: admin_only
@@ -103,7 +194,12 @@ config:
         - 'view any term'
     user.role.authenticated:
       grantPermissions:
+        - 'access administration pages'
+        - 'access coffee'
+        - 'access contextual links'
+        - 'access navigation'
         - 'view any term'
+        - 'view the administration theme'
     user.role.content_editor:
       grantPermissions:
         - 'access admin audit trail'
