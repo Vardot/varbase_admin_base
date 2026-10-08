@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.4] - 2026-10-09
+### Added
+- Give the welcome dashboard the Varbase dashboard layout
+  ([#3629449](https://www.drupal.org/i/3629449)): a welcome card with the user's picture
+  and name, Add content, Top tasks and Drupal Events on the left, the editor's drafts,
+  recent content and accessibility alerts on the right, and scheduled content underneath.
+  Applies core's `user_picture` recipe for the welcome card.
+### Fixed
+- Carry the admin UI from the removed `drupal_cms_admin_ui` recipe
+  ([#3629379](https://www.drupal.org/i/3629379)). Drupal CMS 2.2 removed it and its last
+  release requires Tagify 1, so Vardot site templates failed to install on Drupal CMS
+  2.2.3 and later. Project Browser, Automatic Updates, the welcome dashboard, the Top tasks
+  menu, the Gin blocks and core's content and people admin views now come from this recipe.
+### Changed
+- Pin the `drupal/varbase_recipes` dependency to `~1.0.0` for the release.
+- Update the version badge to `1.0.4` in `README.md`.
+
 ## [1.0.3] - 2026-10-05
 ### Fixed
 - Grant the anonymous and authenticated roles the Taxonomy Access Fix `view any term`
@@ -101,7 +118,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Varbase Admin Base recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.3...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.4...1.0.x
+[1.0.4]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.3...1.0.4
 [1.0.3]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.2...1.0.3
 [1.0.2]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.1...1.0.2
 [1.0.1]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.0...1.0.1
