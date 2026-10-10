@@ -51,7 +51,7 @@
     "drupal/drupical": "~1",
     "drupal/project_browser": "~2.1",
     "drupal/sam": "~1.2",
-    "drupal/tagify": "~1.0 || ~2.0",
+    "drupal/tagify": "~2.0",
     "drupal/view_password": "~6",
     "drupal/smart_date": "~4.3.0",
     "drupal/varbase_recipes": "1.0.x-dev",
