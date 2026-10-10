@@ -47,6 +47,7 @@
     "drupal/canvas_icon_picker": "~1",
     "drupal/automatic_updates": "~4.1",
     "drupal/dashboard": "~2.2",
+    "drupal/menu_block": "~1",
     "drupal/drupal_cms_helper": "~2",
     "drupal/drupical": "~1",
     "drupal/project_browser": "~2.1",

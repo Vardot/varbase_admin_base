@@ -54,6 +54,7 @@ install:
   - drupal_cms_helper
   - drupical
   - file
+  - menu_block
   - menu_link_content
   - menu_ui
   - project_browser
