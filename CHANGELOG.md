@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.5] - 2026-10-10
+### Changed
+- Update the Tagify module from `~1` to `~2` ([#3629839](https://www.drupal.org/i/3629839)),
+  so every Varbase line uses Tagify 2 with the one Tagify patch in Varbase Patches.
+- Pin the `drupal/varbase_recipes` dependency to `~1.0.0` for the release.
+- Update the version badge to `1.0.5` in `README.md`.
+
 ## [1.0.4] - 2026-10-09
 ### Added
 - Give the welcome dashboard the Varbase dashboard layout
@@ -118,7 +125,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Varbase Admin Base recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.4...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.5...1.0.x
+[1.0.5]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.4...1.0.5
 [1.0.4]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.3...1.0.4
 [1.0.3]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.2...1.0.3
 [1.0.2]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.1...1.0.2
