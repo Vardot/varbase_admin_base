@@ -6,11 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.0.7] - 2026-10-11
 ### Fixed
 - Stop granting the authenticated role `access navigation`, `access administration pages`,
   `view the administration theme`, `access coffee` and `access contextual links`, so a plain
   logged-in user no longer sees the Navigation sidebar and top bar. The editorial roles keep
   them through their own grants ([#3630118](https://www.drupal.org/i/3630118)).
+  Recipes cannot revoke permissions, so existing sites keep them until an admin runs
+  `drush role:perm:remove authenticated 'access administration pages,access coffee,access contextual links,access navigation,view the administration theme'`.
+### Changed
+- Pin the `drupal/varbase_recipes` dependency to `~1.0.0` for the release.
+- Update the version badge to `1.0.7` in `README.md`.
 
 ## [1.0.6] - 2026-10-10
 ### Fixed
@@ -139,7 +146,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Varbase Admin Base recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.6...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.7...1.0.x
+[1.0.7]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.6...1.0.7
 [1.0.6]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.5...1.0.6
 [1.0.5]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.4...1.0.5
 [1.0.4]: https://git.drupalcode.org/project/varbase_admin_base/-/compare/1.0.3...1.0.4
