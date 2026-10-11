@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Stop granting the authenticated role `access navigation`, `access administration pages`,
+  `view the administration theme`, `access coffee` and `access contextual links`, so a plain
+  logged-in user no longer sees the Navigation sidebar and top bar. The editorial roles keep
+  them through their own grants ([#3630118](https://www.drupal.org/i/3630118)).
 
 ## [1.0.6] - 2026-10-10
 ### Fixed
